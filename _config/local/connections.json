@@ -1,0 +1,6 @@
+{
+	"hyper_model": {
+		"connectionType": "sqlite",
+		"connectionString": "platform.db"
+	}
+}

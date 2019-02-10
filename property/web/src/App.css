@@ -1,0 +1,58 @@
+.App {
+  text-align: center;
+}
+
+
+.app .instructions{
+  padding:16px;
+  font-style: italic;
+  margin-bottom: 32px; 
+  background: #222;;
+}
+
+body {
+  background: #2a323c;
+  color: #ddd;
+}
+
+.app .bg-1, .bg-left-nav {
+  background :#323c48;
+}
+
+.app .dashboard{
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.app .bg-1, .app .bg-left-nav {
+  background :#323c48;
+}
+
+.app .bg-2, .app .bg-paper {
+  background: #3F464F
+}
+.app .bg-3, .app .bg-paper-inner {
+  background: #4b545f
+}
+
+.app .dashboard-component{
+  padding:16px;
+}
+
+.app .component-instructions{
+  color :#999;
+  font-style: italic;
+
+}
+
+.app h1,
+.app h2,
+.app h3,
+.app h4{
+  color: #eee;
+  font-style: normal;
+}
+
+.app a{
+  color: #fff;
+}

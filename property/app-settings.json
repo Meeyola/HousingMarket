@@ -1,0 +1,12 @@
+{
+	"AppCode": "property",
+	"AppName": "Melbourne Property Prices",
+	"AppSecret": "Mu5wbGvhR5LZ22sRm9SqHMwft",
+	"OwnerEmails": "",
+	"PageRewrites": [
+		{
+			"PublicUrl": "/",
+			"LocalUrl": "index.html"
+		}
+	]
+}
