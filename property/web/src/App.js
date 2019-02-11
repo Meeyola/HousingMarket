@@ -11,10 +11,10 @@ class App extends Component {
     return (
       <div className="app">
         <Paper className="header-instructions instructions">
-          <Typography variant="h3">INSTRUCTIONS</Typography>
+          <Typography variant="h4">INSTRUCTIONS</Typography>
           <p>
-            The task here is to create an interactive dashboard for exploring Wine Reviews data, as per the
-        Kaggle data set available here: <a href="https://www.kaggle.com/zynicide/wine-reviews">https://www.kaggle.com/zynicide/wine-reviews</a>.
+            The task here is to create an interactive dashboard for exploring Melbourne Property Data, as per the
+        Kaggle data set available here: <a href="https://www.kaggle.com/anthonypino/melbourne-housing-market">https://www.kaggle.com/anthonypino/melbourne-housing-market</a>.
         </p>
 
           <p>
@@ -30,22 +30,42 @@ class App extends Component {
             so that clicking a dimension from one component should update the other components.  There should also
             be functionality to clear the filters to go back to showing data without that filter applied.
         </p>
+          <Typography variant="title">CHARTING LIBRARY</Typography>
           <p>
             We would like you to use the <a href="https://nivo.rocks/about">Nivo chart library</a>, which is build on
             top of d3.
         </p>
+          <Typography variant="title">UI LIBRARY</Typography>
           <p>
             This page uses Material UI for layout and basic components.  See documentation at <a href="https://material-ui.com">https://material-ui.com</a>
 
           </p>
 
+          <Typography variant="title">DATA API</Typography>
           <p>
-            The CSV data file containing the wine reviews is located here:
-              <pre>wine\public\data\winemag-data_first150k.csv</pre>
+            You can make HTTP requests to get summary statistics from the local servers API at the following URLs:
           </p>
           <p>
-            You will need to build basic functionality to query this file, either in middleware (E.g. NodeJS)
-            or on the front end.
+            All yearly sales data (Grouped by Year):<br />
+            <a href="http://localhost:8000/app/property/api/sales_by_year/get">http://localhost:8000/app/property/api/sales_by_year/get</a> <br />
+
+            Sales data (Grouped By Suburb):<br />
+            <a href="http://localhost:8000/app/property/api/sales_by_suburb/get">http://localhost:8000/app/property/api/sales_by_suburb/get</a> <br />
+
+            Sales data (Grouped By Bedrooms):<br />
+            <a href="http://localhost:8000/app/property/api/sales_by_rooms/get">http://localhost:8000/app/property/api/sales_by_rooms/get</a><br />
+          </p>
+          <p>
+            All the endpoints listed above will also accept the following parameters:
+
+          </p>
+          <p>
+            <b>year</b>: Limit the calculation to sales in the given year<br />
+            <b>suburb</b>: limit the calculation of sales to the given suburb<br />
+            <b>rooms</b>: limit the calculation of sales to the given number of rooms<br />
+
+            eg:<br />
+            <a href="http://localhost:8000/app/property/api/sales_by_suburb/get?year=2017&suburb=Kew">http://localhost:8000/app/property/api/sales_by_suburb/get?year=2017&amp;suburb=Kew</a> <br />
           </p>
 
         </Paper>
@@ -54,10 +74,10 @@ class App extends Component {
           <Grid container spacing={24}>
             <Grid item md={12} className="grid-cell-line-chart">
               <Paper className="instructions bg-paper dashboard-component">
-                <Typography variant="title">AVERAGE RATING BY YEAR</Typography>
+                <Typography variant="title">AVERAGE PRICE BY YEAR</Typography>
                 <p className="component-instructions">
-                  Create a Line chart showing <b>Average rating by Year</b>.  Each point ("Year") on the chart
-                  should be clickable, filtering the other components to only include wine reviews from that
+                  Create a Line chart showing <b>Average Sales Price  by Year</b>.  Each point ("Year") on the chart
+                  should be clickable, filtering the other components to only include properties from that
                   particular year.
               </p>
 
@@ -69,11 +89,12 @@ class App extends Component {
 
             <Grid item md={6} className="grid-cell-table">
               <Paper className="bg-paper dashboard-component">
-                <Typography variant="title">AVERAGE RATING BY COUNTRY</Typography>
+                <Typography variant="title">AVERAGE PRICE BY COUNTRY</Typography>
                 <p className="component-instructions">
-                  Create a Table here, showing <b>Average rating by Country Here </b>.  Each row
-                  contain information about the country that produced the wine, where the name of
-                  the Country is clickable, and serves as a filter for the other components on the page.
+                  Create a Table here, showing <b>Average sales price</b>.  Each row
+                  contain information about the suburb of the sold property, where the name of
+                  the Suburb is clickable, and serves as a filter for the other components on the page (e.g. clicking
+                  on "Kew" would limit the line chart &amp; bar chart to only include properties from Kew).
               </p>
                 <p className="component-instructions">
                   Please ensure that this component is in its own file, with its own styling.
@@ -84,9 +105,9 @@ class App extends Component {
             <Grid item md={6} className="grid-cell-bar-chart">
 
               <Paper className="bg-paper dashboard-component">
-                <Typography variant="title">AVERAGE RATING BY VARIETY</Typography>
+                <Typography variant="title">AVERAGE PRICE BY ROOMS</Typography>
                 <p className="component-instructions">
-                  Create a <b>Bar Chart</b> here, showing <b>Average rating by Variety here </b> (e.g. "Cabernet Sauvignon", "Pinot Noir", "Chardonay", etc).
+                  Create a <b>Bar Chart</b> here, showing <b>Average Sales price by Number of Rooms here </b> (e.g. 1, 2, 3, etc).
               Each bar should also be clickable, which filters the other components on the screen</p>
                 <p className="component-instructions">
                   Please ensure that this component is in its own file, with its own styling.

@@ -5,6 +5,8 @@
 		.WithHttpOutputAsJson();
 
 	var suburbParam = Context.WithParameter("suburb");
+	var roomsParam = Context.WithParameter("rooms");
+	var yearParam = Context.WithParameter("year");
 }
 
 SELECT	COUNT(*) AS sales,
@@ -12,6 +14,9 @@ SELECT	COUNT(*) AS sales,
         CAST(substr(DATE, -4) AS INT) AS year
 FROM melbourne_property_prices
 WHERE 	method = 'S'
-AND 	suburb = @suburbParam
+AND 	(suburb = @suburbParam OR @suburbParam IS NULL)
+AND 	(rooms = @roomsParam OR @roomsParam IS NULL)
+AND 	(CAST(substr(DATE, -4) AS INT) = @yearParam OR @yearParam IS NULL)
+
 GROUP BY CAST(substr(DATE, -4) AS INT)
 
