@@ -1,5 +1,4 @@
-
-#Instructions#
+# Instructions
 
 Please install the following dependencies:
  - Dotnet Core SDK (v2.2.103) from https://dotnet.microsoft.com/download
@@ -27,7 +26,7 @@ This page also contains the further instructions for the dashboard that you are 
 
 The code that you need to edit / modify is all located within ./melbourne-property/property/web/src which is essentially a slightly modified React Create App based template.
 
-#The task
+# The task
 
 Create an interactive dashboard for exploring Melbourne Property Data, as per the Kaggle data set available here: https://www.kaggle.com/anthonypino/melbourne-housing-market.
 
@@ -35,7 +34,7 @@ To complete this task, you will need to write Three components:
  - A line chart (showing average sale price by year)
  - A table (showing average sale price by suburb)
  - A bar chart (showing average sale price by number of rooms)
- 
+
 Each of these components will provide the ability to filter the data for the rest of the components, so that clicking a dimension from one component should update the other components. There should also be functionality to clear the filters to go back to showing data without that filter applied.  
 
 You may manage the current state of the front end using whatever technology you are most comfortable with.
