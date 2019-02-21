@@ -11,7 +11,8 @@
 
 SELECT	COUNT(*) AS sales,
         AVG(CAST(price AS float)) AS avg_price,
-      	suburb
+      	suburb,
+		SUM(CAST(price AS float)) / 1000 AS total_price
 FROM melbourne_property_prices
 WHERE 	method = 'S'
 AND 	(suburb = @suburbParam OR @suburbParam IS NULL)

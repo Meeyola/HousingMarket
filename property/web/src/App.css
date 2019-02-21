@@ -1,7 +1,9 @@
-.App {
+.app {
   text-align: center;
+  display:flex;
+  flex-flow:column;
+  align-items:center;
 }
-
 
 .app .instructions{
   padding:16px;

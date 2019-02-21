@@ -1,0 +1,25 @@
+.Dashboard {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+}
+
+.Dashboard .title {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.Dashboard .charts {
+  margin: 0 -10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.Dashboard .chart-item {
+  height: 580px;
+  background: whitesmoke;
+  margin: 0 10px 20px;
+  border-radius: 25px;
+  padding-top: 20px;
+}

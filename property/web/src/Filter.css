@@ -1,0 +1,20 @@
+.Filter {
+  background: whitesmoke;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.Filter .suburb-select {
+  width: 300px;
+}
+
+.Filter .year-select {
+  width: 200px;
+}
+
+.Filter .input-element {
+  margin: 0 15px;
+}
